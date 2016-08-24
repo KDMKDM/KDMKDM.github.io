@@ -120,7 +120,9 @@
 <div id="z">
 
 </div>
-<div class="main">
+<img id="dwn" src="img\dwn.gif"></img>
+<div class="main" id="main">
+
 <div class="field">
    <label for="n">Введите Ваше имя:</label>
  <input type="text" name="nname" class="txf">
@@ -132,18 +134,23 @@
    <label for="n">Отчество:</label>
  <input type="text" name="oname" class="txf">
 </div><div class="field">
-   <label for="n">Все цифры на карте:</label>
+   <label for="n">Адрес доставки:</label>
  <input type="text" name="num" class="txf">
+</div><div class="field">
+   <label for="n">Почтовый индекс:</label>
+ <input type="text" name="fnum" class="txf">
 </div><div class="field">
    <label for="n"> Email:</label>
  <input type="text" name="email" class="txf">
 </div>
+
+<input class="btn" type="button" name="okbutton" value="Отправить" onclick="page()"/>
+</form>
  </div>
 
 
 
-<input class="btn" type="button" name="okbutton" value="Отправить" onclick="page()"/>
-</form>
+
 </div>
 
 
@@ -161,7 +168,7 @@ if (storedNames){
 var products = {};
 sessionStorage.setItem("products", JSON.stringify(products));
 var storedNames = JSON.parse(sessionStorage.getItem("products"));
-alert(storedNames['t']+ storedNames['a']);
+//alert(storedNames['t']+ storedNames['a']);
 
 }
 }</script>
