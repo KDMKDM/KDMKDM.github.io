@@ -86,7 +86,7 @@ var pr = JSON.stringify(products);
 
 function restart(){
 	sessionStorage.clear();
-	location.href = 'file:///C:/Tem-Shop/index.html';
+	location.href = 'https://kdmkdm.github.io';
 
 }
 
