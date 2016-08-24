@@ -77,7 +77,7 @@ var pr = JSON.stringify(products);
       if (xmlhttp.readyState == 4) { // Ответ пришёл
         if(xmlhttp.status == 200) { // Сервер вернул код 200 (что хорошо)
 			document.getElementById("dwn").src ="img\\dwn.gif";
-          document.getElementById("z").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><a href='#' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
+          document.getElementById("z").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><a href='' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
         }
       }
     };
