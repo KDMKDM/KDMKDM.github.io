@@ -17,9 +17,7 @@ function getXmlHttp() {
 
 
 function page(){
-if ( /\s/.test("строка") ) {
-alert("ASD");
-}
+
 	if (document.getElementsByName("nname")[0].value!="") {
 		data.name=document.getElementsByName("nname")[0].value;
 	}else{
@@ -46,7 +44,7 @@ data.num=document.getElementsByName("num")[0].value;
 		return alert("Введите адрес доставки");
 	}
 	if (document.getElementsByName("fnum")[0].value!="") {
-data.num=document.getElementsByName("fnum")[0].value;
+data.fnum=document.getElementsByName("fnum")[0].value;
 	}else{
 		
 		return alert("Введите почтовый индекс");

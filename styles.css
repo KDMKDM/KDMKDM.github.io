@@ -8,31 +8,80 @@ text-align: center
 #l{
   width: 100px;
       margin-top: 15px;
+	  margin-bottom: 5px;
+
 }
 
-.t{
-
-margin: auto;
+#aside1 {  /* селектор блока, который будет оставаться на месте */
+    position: fixed;
+    z-index: 101;
+    display: block;
+    margin-left: 980px;
     text-align: center;
-	width: 100px;
-	border-style: solid;
-border-color: cadetblue;
+    margin-top: 30px;
+    background-color: #83c7c7;
+    font-size: 19px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	padding: 5px;
 }
+.t {
+    margin: auto;
+    text-align: center;
+    width: 8em;
 
-.t:hover{
-border-style: solid;
-border-color: darkgrey;
 }
+main {
+        max-width: 950px;
+    margin: 0 auto;
+}
+footer {
+    position: relative;
+    top: 15px;
+
+    clear: both;
+    height: 150px;
+	background-image: url(img/p.jpg); /* Путь к фоновому рисунку */
+
+    background-color: #50bcdc;
+    text-align: center;
+	height: 150px;
+	background-image: url(img/p.jpg); /* Путь к фоновому рисунку */
+    background-position: center; /* Положение фона */
+    background-repeat: repeat-x; /* Повторяем фон по горизонтали */
+	    background-size: 70px 150px;
+    
+}
+.photo {
+    display: inline-block; /* Строчно-блочный элемент */
+    position: relative; /* Относительное позиционирование */
+	width: 8em;
+
+   }
+   .photo:hover::after {
+    content: attr(data-title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; right: 0; bottom: 3px; /* Положение подсказки */
+    z-index: 1; /* Отображаем подсказку поверх других элементов */
+    background: rgba(0,128,128,0.5); /* Полупрозрачный цвет фона */
+    color: #fff; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    font-family: Arial, sans-serif; /* Гарнитура шрифта */
+    font-size: 11px; /* Размер текста подсказки */
+    padding: 5px 10px; /* Поля */
+	margin:0em;
+   
+   }
 
 #o{
-width:950px;
-
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+    width: 950px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     padding: 10px;
     background-color: #83c7c7;
-margin: auto;
+    margin: auto;
     text-align: center;
-	    margin-top: 30px;
+    margin-top: 30px;
+    display: block;
+    float: left;
 }
 #lo{
     padding: 0px;
@@ -46,8 +95,25 @@ margin: auto;
 	    background-size: 70px 150px;
 	
 }
-
+#f{
+	    position: relative;
+}
+#fi{
+	    position: absolute;
+    top: -82px;
+    right: 50px;
+}
 .nam{
+	
+	padding: 0px;
+	margin: 0px;
+	    background-color: #4b8284;
+		
+font-weight:bold;
+color:#EADAED;
+
+}
+.op{
 	
 	padding: 0px;
 	margin: 0px;
@@ -62,7 +128,7 @@ margin: auto;
 
 .txf{
 background-color: #83c7c7;
-border: 2px solid black;
+border: 1px solid black;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#03deff', endColorstr = '#5cc3ff');
 /*INNER ELEMENTS MUST NOT BREAK THIS ELEMENTS BOUNDARIES*/
 /*Element must have a height (not auto)*/
@@ -70,7 +136,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#03deff', en
 -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#03deff', endColorstr = '#5cc3ff')";
 /*Element must have a height (not auto)*/
 /*All filters must be placed together*/
-width: 770px;
+width: 750px;
     outline: none;
     border-style: none;
     border-bottom-style: solid;
@@ -111,28 +177,22 @@ vertical-align: top;
 text-align:center;
 
 /* Отступы между блоками */
-margin: 10px 0px;
-
-
+margin: 5px 0px;
 
 }
 
-.thumbnail .r
-{
-/* Если есть необходимость, то свойства padding, border, background и position со значением relative
-лучше задавать у этого элемента -- это несколько расширит количество поддерживаемых версий браузеров */
-
-/* Задаем минимальную ширину по тексту */
-width: 8em;
-
-/* Минимальная ширина в пикселях будет автоматически рассчитываться по ширине картинки */
-float: left;
-padding: 10px 0px;
-margin: 5px 0px;
+.thumbnail .r {
+    width: 9em;
+    float: left;
+    padding-top: 5px;
+    margin: 0px 5px;
     background-color: cadetblue;
 
 }
-
+.thumbnail .r:hover{
+	background-color: #407a7b;
+	
+}
 
 .zak
 {
@@ -308,7 +368,7 @@ margin: auto;
 .field {
 	clear:both;
 	text-align:right;
-	    margin: 0px 15px;;}
+	    margin: 0px 30px;;}
 label {   
 float: left;
  }
@@ -349,4 +409,14 @@ float: left;
 .asd{
 	    margin: 15px;
     font-size: 30px;
+}
+#pn{
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    color: mintcream;
+}
+#mi{
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }

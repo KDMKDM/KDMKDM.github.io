@@ -89,10 +89,12 @@ function og(elem, path){
             _win = document.createElement('div');
             _win.id = 'modalwindow';
             _win.style.padding = '0 0 0px 0';
+			_win.style.backgroundColor = 'teal';
+			_win.style.borderRadius = '10px';
             parent.insertBefore(_win, obj);
         }
-        _win.style.width = width + 'px'; //Установим ширину окна
-		_win.style.height = 800+'px';
+       // _win.style.width = width + 'px'; //Установим ширину окна
+		//_win.style.height = 800+'px';
         _win.style.display = 'inline'; //Зададим CSS-свойство
         
         _win.innerHTML = html; //Добавим нужный HTML-текст в наше диалоговое окно
@@ -113,8 +115,8 @@ function og(elem, path){
                 
     },
 	show: function(width, path) {
-		
-		html='<img name='+path.name+' src = '+path.src+' width = "1000" height = "800"  id = "img" onClick=nim(this) > </img>';
+
+		html='<img name='+path.id+' id="mi" src = img/'+path.id+'/'+path.id+'1.jpg'+' width = "1000" height = "800"  id = "img" onClick=nim(this) > </img><p id="pn" >1 из 3</p>';
         modalWindow.initBlock();
         modalWindow.initWin(width, html);
     }
@@ -125,6 +127,7 @@ function nim(elem){
 	i++;
 	if (i>3) { i=1;}
 	elem.src='img/'+elem.name+'/'+elem.name+i+'.jpg';
+	document.getElementById("pn").innerHTML =i+' из 3';
 }
 
 function ico (elem, t) {
@@ -148,15 +151,27 @@ function ico (elem, t) {
 
 
 
+
 function rsh(){
 	var t="";
+	var c=0;
 	var all = 0;
+	var s=0;
 	for(var i in products) {
 
     if (!products.hasOwnProperty(i)) continue;
 t=t+products[i][0]+" "+products[i][1]+"шт. = "+products[i][1]*products[i][2]+"руб."+"<br>";
+c=c+Number(products[i][1]);
+if (c>5) s=250;
+if (c>10) s=500;
+
 all+=products[i][1]*products[i][2];
 
 }
-document.getElementById('z').innerHTML = t+all+"руб.";
+if (s>0){
+	document.getElementById('z').innerHTML = t+ "<br>Всего:"+c+" штук, скидка "+s+"рублей. Цена со скидкой " + (all-s)+"руб.";
+}else{
+	document.getElementById('z').innerHTML = t+ "<br>Всего:"+c+" штук, " + all+"руб.";
+}
+document.getElementById('aside1').innerHTML = "Сумма заказа "+ (all-s)+"руб.";
 }
