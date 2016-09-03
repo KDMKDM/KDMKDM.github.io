@@ -27,7 +27,8 @@ text-align: center
 .t {
     margin: auto;
     text-align: center;
-    width: 8em;
+    height: 85px;
+    width: 128px;
 
 }
 main {
