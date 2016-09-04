@@ -17,6 +17,10 @@ function getXmlHttp() {
 
 
 function page(){
+	var t =sessionStorage.getItem("products");
+	if (t=="{}") {
+		return 		alert("Не выбрано ни одного товара :'(");
+	}
 
 	if (document.getElementsByName("nname")[0].value!="") {
 		data.name=document.getElementsByName("nname")[0].value;
@@ -65,6 +69,9 @@ data.email=document.getElementsByName("email")[0].value;
 
 	 document.getElementById("dwn").src ="img\\dwnA.gif";
 	 document.getElementById("main").style.display ="none";
+	 for(var i in products) {
+		 products[i][3].delete;
+	 }
 var d = JSON.stringify(data);
 var pr = JSON.stringify(products);
  var xmlhttp = getXmlHttp(); // Создаём объект XMLHTTP

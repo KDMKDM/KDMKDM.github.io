@@ -21,12 +21,13 @@ function bas(elem) {
   {
 	  //products = JSON.parse(sessionStorage.getItem("products"));;
 	  //sessionStorage.clear
-	
+	//sessionStorage.clear
     //console.log(products[elem.name]);
 
 var sel=document.getElementById("s-"+elem.name)
 
       if (products[elem.name]){
+		  sessionStorage.clear
 		 delete products[elem.name];
 		 sessionStorage.setItem("products", JSON.stringify(products));
 		 sel.disabled=false;
@@ -36,14 +37,15 @@ var sel=document.getElementById("s-"+elem.name)
 		 //products[elem.name]=0;
 	 }else{
 		 //delete products[elem.name];
+		 var arr= [];
+		 arr=[elem.name,sel.value, 250, sel.name];
+		 products[elem.name]=arr;
 		 sessionStorage.setItem("products", JSON.stringify(products));
 		 sel.style.backgroundColor=	'#468499';
 		 sel.disabled=true;
 		 elem.style.backgroundColor='#468499';
 		 elem.value='Из корзинки';
-		 var arr= [];
-		 arr=[elem.name,sel.value, 250];
-		 products[elem.name]=arr;
+		
 	  }
 	  rsh();
 	 console.log(products[elem.name]);
@@ -93,8 +95,8 @@ function og(elem, path){
 			_win.style.borderRadius = '10px';
             parent.insertBefore(_win, obj);
         }
-       // _win.style.width = width + 'px'; //Установим ширину окна
-		//_win.style.height = 800+'px';
+       // _win.style.width = 800 + 'px'; //Установим ширину окна
+		//_win.style.height = 531+'px';
         _win.style.display = 'inline'; //Зададим CSS-свойство
         
         _win.innerHTML = html; //Добавим нужный HTML-текст в наше диалоговое окно
@@ -116,7 +118,7 @@ function og(elem, path){
     },
 	show: function(width, path) {
 
-		html='<img name='+path.id+' id="mi" src = img/'+path.id+'/'+path.id+'1.jpg'+' width = "1000" height = "800"  id = "img" onClick=nim(this) > </img><p id="pn" >1 из 3</p>';
+		html='<img name='+path.id+' id="mi" src = img/'+path.id+'/'+path.id+'1.jpg'+' width = "800" height = "531"  id = "img" onClick=nim(this) > </img><p id="pn" >1 из 3</p>';
         modalWindow.initBlock();
         modalWindow.initWin(width, html);
     }
@@ -157,21 +159,26 @@ function rsh(){
 	var c=0;
 	var all = 0;
 	var s=0;
+	var d =280;
 	for(var i in products) {
 
     if (!products.hasOwnProperty(i)) continue;
-t=t+products[i][0]+" "+products[i][1]+"шт. = "+products[i][1]*products[i][2]+"руб."+"<br>";
+t=t+products[i][3]+" "+products[i][1]+"шт. = "+products[i][1]*products[i][2]+"руб."+"<br>";
 c=c+Number(products[i][1]);
 if (c>5) s=250;
-if (c>10) s=500;
+
 
 all+=products[i][1]*products[i][2];
 
 }
+if(t!=""){
 if (s>0){
-	document.getElementById('z').innerHTML = t+ "<br>Всего:"+c+" штук, скидка "+s+"рублей. Цена со скидкой " + (all-s)+"руб.";
+	document.getElementById('z').innerHTML = t+ "<br>Всего:"+c+" штук, скидка "+s+"рублей. Цена со скидкой " + (all-s)+"руб. + "+d+"руб. доставка = "+(all-s+280)+"руб.";
 }else{
-	document.getElementById('z').innerHTML = t+ "<br>Всего:"+c+" штук, " + all+"руб.";
+	document.getElementById('z').innerHTML = t+ "<br>Всего:"+c+" штук, " + all+"руб. + "+d+".р доставка = "+(all+d)+"руб.";
 }
-document.getElementById('aside1').innerHTML = "Сумма заказа "+ (all-s)+"руб.";
+}else{
+	document.getElementById('z').innerHTML = "";
+}
+document.getElementById('aside1').innerHTML = "Сумма заказа "+ (all-s+d)+"руб.";
 }
