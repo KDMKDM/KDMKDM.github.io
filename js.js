@@ -75,7 +75,7 @@ data.email=document.getElementsByName("email")[0].value;
 var d = JSON.stringify(data);
 var pr = JSON.stringify(products);
  var xmlhttp = getXmlHttp(); // Создаём объект XMLHTTP
-    xmlhttp.open('POST', 'https://script.google.com/macros/s/AKfycbyMWF3JUIpDxZDazzneFRbGxcQpzQxVot1HKmqzNUWtIi2mL9Rn/dev', true); // Открываем асинхронное соединение
+    xmlhttp.open('POST', 'https://script.google.com/macros/s/AKfycbzM6i-Uj2DG6MumbdFR49k4pmg4nMioiN1AFKar5K4qXagDgh8/exec', true); // Открываем асинхронное соединение
     xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // Отправляем кодировку
     xmlhttp.send("pr=" + encodeURIComponent(pr)+"&d=" + encodeURIComponent(d) ); // Отправляем POST-запрос
     xmlhttp.onreadystatechange = function() { // Ждём ответа от сервера

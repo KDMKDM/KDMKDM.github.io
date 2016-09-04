@@ -165,7 +165,7 @@ function rsh(){
     if (!products.hasOwnProperty(i)) continue;
 t=t+products[i][3]+" "+products[i][1]+"шт. = "+products[i][1]*products[i][2]+"руб."+"<br>";
 c=c+Number(products[i][1]);
-if (c>5) s=250;
+if (c>5) s=10;
 
 
 all+=products[i][1]*products[i][2];
@@ -173,12 +173,14 @@ all+=products[i][1]*products[i][2];
 }
 if(t!=""){
 if (s>0){
-	document.getElementById('z').innerHTML = t+ "<br>Всего:"+c+" штук, скидка "+s+"рублей. Цена со скидкой " + (all-s)+"руб. + "+d+"руб. доставка = "+(all-s+280)+"руб.";
+	document.getElementById('aside1').innerHTML = t+ "<br>Всего:"+c+" штук, скидка "+s+"%. Цена со скидкой " + (all*(1-(s/100)))+"руб. + "+d+"руб. доставка = "+(all*(1-(s/100))+280)+"руб.";
+	document.getElementById('z').innerHTML = t+ "<br>Всего:"+c+" штук, скидка "+s+"%. Цена со скидкой " + (all*(1-(s/100)))+"руб. + "+d+"руб. доставка = "+(all*(1-(s/100))+280)+"руб.";
 }else{
-	document.getElementById('z').innerHTML = t+ "<br>Всего:"+c+" штук, " + all+"руб. + "+d+".р доставка = "+(all+d)+"руб.";
+	document.getElementById('aside1').innerHTML = t+ "<br>Всего:"+c+" штук, " + all+"руб. + "+d+".р доставка = "+(all+d)+"руб.";
+	document.getElementById('z').innerHTML = t+ "<br><p>Всего:"+c+" штук, " + all+"руб. + "+d+".р доставка </p><br> <p>"+(all+d)+"руб.</p>";
 }
 }else{
 	document.getElementById('z').innerHTML = "";
 }
-document.getElementById('aside1').innerHTML = "Сумма заказа "+ (all-s+d)+"руб.";
+//document.getElementById('aside1').innerHTML = "Сумма заказа "+ (all-s+d)+"руб.";
 }
