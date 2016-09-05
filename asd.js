@@ -38,7 +38,9 @@ var sel=document.getElementById("s-"+elem.name)
 	 }else{
 		 //delete products[elem.name];
 		 var arr= [];
-		 arr=[elem.name,sel.value, 250, sel.name];
+		 var pr= document.getElementById("pr-"+elem.name).firstChild.nodeValue;
+
+		 arr=[elem.name,sel.value,pr.slice(0, -2), sel.name];
 		 products[elem.name]=arr;
 		 sessionStorage.setItem("products", JSON.stringify(products));
 		 sel.style.backgroundColor=	'#468499';
