@@ -167,7 +167,7 @@ function rsh(){
     if (!products.hasOwnProperty(i)) continue;
 t=t+products[i][3]+" "+products[i][1]+"шт. = "+products[i][1]*products[i][2]+"руб."+"<br>";
 c=c+Number(products[i][1]);
-if (c>5) s=10;
+if (c>4) s=10;
 
 
 all+=products[i][1]*products[i][2];
