@@ -17,7 +17,7 @@ function getXmlHttp() {
 
 
 function page(){
-/*	var t =sessionStorage.getItem("products");
+	var t =sessionStorage.getItem("products");
 	if (t=="{}") {
 		return 		alert("Не выбрано ни одного товара :'(");
 	}
@@ -72,7 +72,7 @@ data.vk=document.getElementsByName("vk")[0].value;
 		
 		return alert("Ссылку на страницу VK или удобный способ связи");
 	}
-*/
+
 
 
 
