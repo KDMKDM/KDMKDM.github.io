@@ -108,7 +108,7 @@ function og(elem, path){
         //Установим позицию по центру экрана
 
         _win.style.left = '50%'; //Позиция по горизонтали
-        _win.style.top = '50%'; //Позиция по вертикали
+        _win.style.top = '40%'; //Позиция по вертикали
 
         //Выравнивание по центру путем задания отрицательных отступов
         _win.style.marginTop = -(_win.offsetHeight / 2) + 'px'; 
@@ -117,12 +117,15 @@ function og(elem, path){
 	close: function() {
 		document.getElementById('modalwindow').style.display = 'none';
         document.getElementById('blockscreen').style.display = 'none';
+		document.getElementById('aside1').style.display="";
 		i=1;
                 
     },
 	show: function(width, path) {
 //og(this.parentNode, this)
-		html='<img name='+path.id+' id="mi" src = img/'+path.id+'/'+path.id+'1.jpg'+' width = "800" height = "531"  id = "img" onClick=nim(this) > </img><p id="pn" >1 из 3</p>';
+
+document.getElementById('aside1').style.display="none";
+		html='<img name='+path.id+' id="mi" src = img/'+path.id+'/'+path.id+'1.jpg'+' height="567px" width="800px"  id = "img" onClick=nim(this) > </img><p id="pn" >1 из 3</p>';
 		//html='<p>fgdfgdfg</p>';
 		modalWindow.initBlock();
         modalWindow.initWin(width, html);
@@ -132,7 +135,21 @@ function og(elem, path){
 
 function nim(elem){
 	i++;
-	if (i>3) { i=1;}
+	elem.style.width="800px";
+		elem.style.height="567px";
+		if (i>3) { 
+	i=1;
+		}
+if (i==3)		{
+			elem.style.width="617px";
+		elem.style.height="800px";
+			
+		}
+		if (i==2)		{
+			elem.style.width="800px";
+		elem.style.height="704px";
+			
+		}
 	elem.src='img/'+elem.name+'/'+elem.name+i+'.jpg';
 	document.getElementById("pn").innerHTML =i+' из 3';
 }
@@ -175,7 +192,7 @@ if (c>4) s=10;
 
 
 all+=products[i][1]*products[i][2];
-
+console.log(all);
 }
 if(t!=""){
 if (s>0){
@@ -187,6 +204,7 @@ if (s>0){
 }
 }else{
 	document.getElementById('z').innerHTML = "";
+	document.getElementById('aside1').innerHTML = ":(";
 
 }
 //document.getElementById('aside1').innerHTML = "Сумма заказа "+ (all-s+d)+"руб.";

@@ -40,7 +40,7 @@ main {
 }
 #fot {
     position: relative;
-    top: 15px;
+    
 
     clear: both;
     height: 150px;
@@ -131,6 +131,7 @@ color:#EADAED;
 }
 
 .txf{
+	    font-weight: bold;
 background-color: #66b5b5;
 border: 1px solid black;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#03deff', endColorstr = '#5cc3ff');
@@ -328,7 +329,7 @@ a {
     position: fixed;
 }
 #blockscreen {
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .8);
     left: 0;
     right: 0;
     top: 0;
@@ -373,6 +374,8 @@ margin: auto;
 .field {
 	clear:both;
 	text-align:right;
+	font-weight: bolder;
+    color: #1d4244;
 	    margin: 0px 30px;;}
 label {   
 float: left;
@@ -430,6 +433,7 @@ float: left;
 header{
 	    position: absolute;
     width: 100%;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 #mi{
 	border-top-left-radius: 10px;
@@ -454,7 +458,7 @@ header{
 			font: 14px/20px Arial, sans-serif;
 			text-align:center;
 			background: #83c7c7;
-			
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
 			    padding-bottom: 155px;
     padding-top: 170px;
 
@@ -483,6 +487,7 @@ header{
 		}
 		footer {
 			    position: absolute;
+				box-shadow: 0 0 10px rgba(0,0,0,0.5);
     width: 100%;
-	margin-top: -165px;
+	margin-top: -150px;
 		}
