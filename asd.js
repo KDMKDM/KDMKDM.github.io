@@ -140,7 +140,10 @@ function nim(elem){
 		if (i>3) { 
 	i=1;
 		}
-if (i==3)		{
+
+	elem.src='img/'+elem.name+'/'+elem.name+i+'.jpg';
+	elem.onload= function(){
+		if (i==3)		{
 			elem.style.width="617px";
 		elem.style.height="800px";
 			
@@ -150,7 +153,7 @@ if (i==3)		{
 		elem.style.height="704px";
 			
 		}
-	elem.src='img/'+elem.name+'/'+elem.name+i+'.jpg';
+	};
 	document.getElementById("pn").innerHTML =i+' из 3';
 }
 
