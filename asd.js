@@ -142,7 +142,7 @@ function nim(elem){
 		}
 
 	elem.src='img/'+elem.name+'/'+elem.name+i+'.jpg';
-	elem.onload= function(elem){
+	elem.onload= function(){
 		if (i==3)		{
 			elem.style.width="617px";
 		elem.style.height="800px";
