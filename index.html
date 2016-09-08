@@ -12,34 +12,25 @@
 		</head>
 
 		<body>
-
-
-		
-
-
-
-		
-		
-		
-
-		
+<body>
+<header>
 <div id="lo">
 <img src="img/p.png" alt="I'm Bob" id="l">
 </div>
-<main>
-  
-<div id="o">
+</header>
+<aside id="aside1">Сумма заказа.</aside>
+<div class="wrapper" id="wrapper">
 
-
-
-
-<div class="thumbnails" >
+	<div class="content">
+		<div class="thumbnails" id="thumbnails" >
 
 	
 					
 				
 				
-	<ins class='thumbnail' name='tem'>			
+	
+				
+<ins class='thumbnail' name='tem'>			
 		<div class='r'>		
 			<div class='photo' id='tem' data-title='Увеличить' onclick='og(this.parentNode, this)'>	
 			<img class='t' id='tem' name='tem'  src='img/tem/tem1.jpg'  alt='Temmie' onclick='og(this.parentNode, this)' ></div><br/>	
@@ -602,8 +593,6 @@
 			</select> </p>	
 		</div>		
 	</ins>			
-				
-
 
 	
 	
@@ -611,55 +600,47 @@
 	
 	
 	
-</div>
+                  </div>
+	               <div id="z">
 
-
-<div id="z">
-
-</div>
+                    </div>
 <img id="dwn" src="img\dwn.gif"></img>
 <div class="main" id="main">
-
+<form class="f" id="frm">
 <div class="field">
-   <label for="n">Имя:</label>
+   <label for="n">Имя:</label><br>
  <input type="text" name="nname" class="txf">
 </div>
 <div class="field">
-   <label for="n">Фамилия:</label>
+   <label for="n">Фамилия:</label><br>
  <input type="text" name="fname" class="txf">
 </div><div class="field">
-   <label for="n">Отчество:</label>
+   <label for="n">Отчество:</label><br>
  <input type="text" name="oname" class="txf">
 </div><div class="field">
-   <label for="n">Адрес доставки:</label>
+   <label for="n">Адрес доставки:</label><br>
  <input type="text" name="num" class="txf">
 </div><div class="field">
-   <label for="n">Почтовый индекс:</label>
+   <label for="n">Почтовый индекс:</label><br>
  <input type="text" name="fnum" class="txf">
 </div><div class="field">
-   <label for="n"> Email:</label>
+   <label for="n"> Email:</label><br>
  <input type="text" name="email" class="txf">
+</div><div class="field">
+   <label for="n"> Ссылка на вк:</label><br>
+ <input type="text" name="vk" class="txf">
 </div>
 
 <input class="btn" type="button" name="okbutton" value="Отправить" onclick="page()"/>
 </form>
- </div>
-
-
-
-
+	</div><!-- .content -->
+  
 </div>
-  <aside id="aside1">Сумма заказа.</aside>
-</main>
 
-
-<footer><div id="f">
+</div><!-- .wrapper --></div></div>
+<footer><div id="fot">
 <img id="fi" src="img\Tem_Shop.gif"></img>
 </div></footer>
-
-
-
-  
 
 <script >	window.onload=function(){
 var storedNames = JSON.parse(sessionStorage.getItem("products"));

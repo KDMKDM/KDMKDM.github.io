@@ -2,6 +2,8 @@ var i =1;
 var p=100;
 var data = {};
 var products = {};
+var all = 0;
+	var d =280;
 function addRow(){
     var div = document.createElement('div');
 
@@ -110,7 +112,7 @@ function og(elem, path){
 
         //Выравнивание по центру путем задания отрицательных отступов
         _win.style.marginTop = -(_win.offsetHeight / 2) + 'px'; 
-        _win.style.marginLeft = -(width / 2) + 'px';
+        _win.style.marginLeft = -(width / 2) +100+ 'px';
     },
 	close: function() {
 		document.getElementById('modalwindow').style.display = 'none';
@@ -119,9 +121,10 @@ function og(elem, path){
                 
     },
 	show: function(width, path) {
-
+//og(this.parentNode, this)
 		html='<img name='+path.id+' id="mi" src = img/'+path.id+'/'+path.id+'1.jpg'+' width = "800" height = "531"  id = "img" onClick=nim(this) > </img><p id="pn" >1 из 3</p>';
-        modalWindow.initBlock();
+		//html='<p>fgdfgdfg</p>';
+		modalWindow.initBlock();
         modalWindow.initWin(width, html);
     }
 }
@@ -157,11 +160,12 @@ function ico (elem, t) {
 
 
 function rsh(){
+	all=0;
 	var t="";
 	var c=0;
-	var all = 0;
+	
 	var s=0;
-	var d =280;
+
 	for(var i in products) {
 
     if (!products.hasOwnProperty(i)) continue;
@@ -183,6 +187,9 @@ if (s>0){
 }
 }else{
 	document.getElementById('z').innerHTML = "";
+
 }
 //document.getElementById('aside1').innerHTML = "Сумма заказа "+ (all-s+d)+"руб.";
 }
+
+

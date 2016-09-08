@@ -17,7 +17,7 @@ function getXmlHttp() {
 
 
 function page(){
-	var t =sessionStorage.getItem("products");
+/*	var t =sessionStorage.getItem("products");
 	if (t=="{}") {
 		return 		alert("Не выбрано ни одного товара :'(");
 	}
@@ -66,23 +66,39 @@ data.email=document.getElementsByName("email")[0].value;
 		
 		return alert("Введите Email");
 	}
+		if (document.getElementsByName("vk")[0].value!="") {
+data.vk=document.getElementsByName("vk")[0].value;
+	}else{
+		
+		return alert("Ссылку на страницу VK или удобный способ связи");
+	}
+*/
 
+
+
+document.getElementById("thumbnails").style.display="none";
+document.getElementById("frm").style.display="none";
 	 document.getElementById("dwn").src ="img\\dwnA.gif";
-	 document.getElementById("main").style.display ="none";
+	 //document.getElementById("main").style.display ="none";
 	 for(var i in products) {
 		 products[i][3].delete;
 	 }
-var d = JSON.stringify(data);
+var ddd = JSON.stringify(data);
 var pr = JSON.stringify(products);
  var xmlhttp = getXmlHttp(); // Создаём объект XMLHTTP
     xmlhttp.open('POST', 'https://script.google.com/macros/s/AKfycbzM6i-Uj2DG6MumbdFR49k4pmg4nMioiN1AFKar5K4qXagDgh8/exec', true); // Открываем асинхронное соединение
     xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // Отправляем кодировку
-    xmlhttp.send("pr=" + encodeURIComponent(pr)+"&d=" + encodeURIComponent(d) ); // Отправляем POST-запрос
+    xmlhttp.send("pr=" + encodeURIComponent(pr)+"&d=" + encodeURIComponent(ddd) ); // Отправляем POST-запрос
     xmlhttp.onreadystatechange = function() { // Ждём ответа от сервера
       if (xmlhttp.readyState == 4) { // Ответ пришёл
         if(xmlhttp.status == 200) { // Сервер вернул код 200 (что хорошо)
+			
 			document.getElementById("dwn").src ="img\\dwn.gif";
-          document.getElementById("z").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><a href='' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
+          document.getElementById("wrapper").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><br><br>Оплатите стоимость заказа " +(Number(all)+Number(d))+ " рублей<br><br> на киви +7 778 312 89 70. <br> <br>ОБЯЗАТЕЛЬНО<br><br> в комментарии к оплате укажите свои ФИО!<br><br> Что бы мы знали кто нам отправил.<br><br><a href='' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
+		          
+				  
+				 //document.getElementById("wrapper").innerHTML = "cvb"; // Выводим ответ сервера
+				   //document.getElementById("wrapper").style.display="none";
         }
       }
     };
