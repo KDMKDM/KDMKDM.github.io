@@ -94,7 +94,7 @@ var pr = JSON.stringify(products);
         if(xmlhttp.status == 200) { // Сервер вернул код 200 (что хорошо)
 			
 			document.getElementById("dwn").src ="img\\dwn.gif";
-          document.getElementById("wrapper").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><br><br>Оплатите стоимость заказа " +(Number(all)+Number(d))+ " рублей<br><br> на киви +7 778 312 89 70. <br> <br>ОБЯЗАТЕЛЬНО<br><br> в комментарии к оплате укажите свои ФИО!<br><br> Что бы мы знали кто нам отправил.<br><br><a href='' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
+          document.getElementById("wrapper").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><br><br>Оплатите стоимость заказа " +(Number(all)+Number(d))+ " рублей<br><br> на киви +7 778 312 89 70. <br> <br>ОБЯЗАТЕЛЬНО<br><br> в комментарии к оплате укажите свои ФИО!<br><br> Что бы мы знали кто оплатил.<br><br>Мы свяжемся с вами для подтверждения.<br><br><a href='' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
 		          
 				  
 				 //document.getElementById("wrapper").innerHTML = "cvb"; // Выводим ответ сервера

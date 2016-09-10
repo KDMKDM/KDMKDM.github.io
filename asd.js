@@ -203,7 +203,7 @@ if (s>0){
 	document.getElementById('z').innerHTML = t+ "<br>Всего:"+c+" штук, скидка "+s+"%. Цена со скидкой " + (all*(1-(s/100)))+"руб. + "+d+"руб. доставка = "+(all*(1-(s/100))+280)+"руб.";
 }else{
 	document.getElementById('aside1').innerHTML = t+ "<br>Всего:"+c+" штук, " + all+"руб. + "+d+".р доставка = "+(all+d)+"руб.";
-	document.getElementById('z').innerHTML = t+ "<br><p>Всего:"+c+" штук, " + all+"руб. + "+d+".р доставка </p><br> <p>"+(all+d)+"руб.</p>";
+	document.getElementById('z').innerHTML = t+ "<br><p>Всего:"+c+" штук, " + all+"руб. + "+d+".р доставка </p><br> <p>Итого: "+(all+d)+"руб.</p>";
 }
 }else{
 	document.getElementById('z').innerHTML = "";
