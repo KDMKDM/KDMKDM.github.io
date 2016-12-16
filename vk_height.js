@@ -20,7 +20,7 @@ VK.init(
 	    alert('error #2');
         }
     }
-    $(document).ready( function(){
+    /*$(document).ready( function(){
         //Вызываем функцию регулировки высоты каждые пол секунды.
-        setInterval('autosize(607)', 500);
+        setInterval('autosize(607)', 500);*/
     });
