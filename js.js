@@ -1,4 +1,4 @@
-function autosize(width) {
+function autosize() {
         //Проверяем элемент body на наличие.
         if (!document.getElementById('body')) {
 			alert('error');
