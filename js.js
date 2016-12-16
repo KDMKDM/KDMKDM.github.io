@@ -85,7 +85,8 @@ document.getElementById("frm").style.display="none";
 	 }
 var ddd = JSON.stringify(data);
 var pr = JSON.stringify(products);
- var xmlhttp = getXmlHttp(); // Создаём объект XMLHTTP
+var s=0;
+var xmlhttp = getXmlHttp(); // Создаём объект XMLHTTP
     xmlhttp.open('POST', 'https://script.google.com/macros/s/AKfycbzM6i-Uj2DG6MumbdFR49k4pmg4nMioiN1AFKar5K4qXagDgh8/exec', true); // Открываем асинхронное соединение
     xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); // Отправляем кодировку
     xmlhttp.send("pr=" + encodeURIComponent(pr)+"&d=" + encodeURIComponent(ddd) ); // Отправляем POST-запрос
@@ -93,15 +94,32 @@ var pr = JSON.stringify(products);
       if (xmlhttp.readyState == 4) { // Ответ пришёл
         if(xmlhttp.status == 200) { // Сервер вернул код 200 (что хорошо)
 			
-			document.getElementById("dwn").src ="img\\dwn.gif";
-          document.getElementById("wrapper").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><br><br>Оплатите стоимость заказа " +(Number(all)+Number(d))+ " рублей<br><br> на киви +7 778 312 89 70. <br> <br>ОБЯЗАТЕЛЬНО<br><br> в комментарии к оплате укажите свои ФИО!<br><br> Что бы мы знали кто оплатил.<br><br>Мы свяжемся с вами для подтверждения.<br><br><a href='' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
-		          
-				  
-				 //document.getElementById("wrapper").innerHTML = "cvb"; // Выводим ответ сервера
-				   //document.getElementById("wrapper").style.display="none";
+			for(var i in products) {
+
+          
+           
+          s=s+Number(products[i][1]);
+        //if (s>4) s=10;
+
+console.log(s)
+          
         }
-      }
-    };
+		
+		
+			document.getElementById("dwn").src ="img\\dwn.gif";
+         if (s<5) {
+			 
+			 document.getElementById("wrapper").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><br><br>Оплатите стоимость заказа " +(Number(all)+Number(d))+ " рублей<br><br> на киви +7 778 312 89 70. <br> <br>ОБЯЗАТЕЛЬНО<br><br> в комментарии к оплате укажите свои ФИО!<br><br> Что бы мы знали кто оплатил.<br><br>Мы свяжемся с вами для подтверждения.<br><br><a href='' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
+		 } else{
+			 
+			 document.getElementById("wrapper").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><br><br>Оплатите стоимость заказа " +(Number(all)-((Number(all)*10)/100)+Number(d))+ " рублей<br><br> на киви +7 778 312 89 70. <br> <br>ОБЯЗАТЕЛЬНО<br><br> в комментарии к оплате укажите свои ФИО!<br><br> Что бы мы знали кто оплатил.<br><br>Мы свяжемся с вами для подтверждения.<br><br><a href='' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
+		 }  
+				 
+				// document.getElementById("wrapper").innerHTML = "cvb"; // Выводим ответ сервера
+				  // document.getElementById("wrapper").style.display="none";
+        }
+     }
+   };
 }
 
 

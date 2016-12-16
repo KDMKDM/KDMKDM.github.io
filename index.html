@@ -11,25 +11,29 @@
 
 		</head>
 
-		<body>
+		
 <body>
-<header>
-<div id="lo">
-<img src="img/p.png" alt="I'm Bob" id="l">
-</div>
-</header>
-<aside id="aside1">Сумма заказа.</aside>
-<div class="wrapper" id="wrapper">
 
-	<div class="content">
-		<div class="thumbnails" id="thumbnails" >
 
+
+<section class="tabs">
+	<input class="asddd" id="tab_1" type="radio" name="tab" checked="checked" />
+	<input class="asddd" id="tab_2" type="radio" name="tab" />
+	<input class="asddd" id="tab_3" type="radio" name="tab" />
+	<input class="asddd" id="tab_4" type="radio" name="tab" />
+	<input class="asddd" id="tab_5" type="radio" name="tab" />
 	
-					
-				
-				
-	
-				
+	<label for="tab_1" id="tab_l1">Undertale</label>
+	<label for="tab_2" id="tab_l2">Steven Universe</label>
+	<label for="tab_3" id="tab_l3">Gravity Falls</label>
+	<label for="tab_4" id="tab_l4">Other</label>
+	<label for="tab_5" id="tab_l5">Ваш заказ</label>
+	<div style="clear:both"></div>
+
+	<div class="tabs_cont">
+		<div id="tab_c1">
+		
+						
 <ins class='thumbnail' name='tem'>			
 		<div class='r'>		
 			<div class='photo' id='tem' data-title='Увеличить' onclick='og(this.parentNode, this)'>	
@@ -348,7 +352,17 @@
 	</ins>			
 				
 					
-	<ins class='thumbnail' name='annD'>			
+
+			
+
+	
+	</div>
+	
+	
+	
+		<div id="tab_c2">
+		
+			<ins class='thumbnail' name='annD'>			
 		<div class='r'>		
 			<div class='photo' id='annD' data-title='Увеличить' onclick='og(this.parentNode, this)'>	
 			<img class='t' id='annD' name='annD'  src='img/annD/annD1.jpg'  alt='Annoying Dog' onclick='og(this.parentNode, this)' ></div><br/>	
@@ -593,20 +607,19 @@
 			</select> </p>	
 		</div>		
 	</ins>			
-
 	
+		
+	</div>
+		<div id="tab_c3">
+		
+	</div>
 	
-	
-	
-	
-	
-                  </div>
-	               <div id="z">
-
-                    </div>
-<img id="dwn" src="img\dwn.gif"></img>
-<div class="main" id="main">
-<form class="f" id="frm">
+		<div id="tab_c4">
+		
+	</div>
+		<div id="tab_c5">
+		
+		<form class="f" id="frm">
 <div class="field">
    <label for="n">Имя:</label><br>
  <input type="text" name="nname" class="txf">
@@ -633,14 +646,20 @@
 
 <input class="btn" type="button" name="okbutton" value="Отправить" onclick="page()"/>
 </form>
-	</div><!-- .content -->
-  
-</div>
+	</div>
+		
+	</div>
+</section>
+	
 
-</div><!-- .wrapper --></div></div>
-<footer><div id="fot">
-<img id="fi" src="img\Tem_Shop.gif"></img>
-</div></footer>
+	
+					
+				
+				
+	
+
+
+
 
 <script >	window.onload=function(){
 var storedNames = JSON.parse(sessionStorage.getItem("products"));
