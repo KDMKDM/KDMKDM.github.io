@@ -496,69 +496,34 @@ header{
 		
 		
 		
-		.tabs {
-	position: relative;
-	margin: 0 auto;
-	width: 800px;
+.tabs {
+    opacity: 0;  /* Прозрачность */
+    visibility: hidden; /* Изначально - спрятан */
 }
-.tabs label {
-	color: #555;
-	cursor: pointer;
-	display: block;
-	float: left;
-	width: 150px;
-	height: 45px;
-	line-height: 45px;
-	position: relative;
-	top: 2px;
-	text-align: center;
+.tab{
+    position:absolute; /* Абсолютное позиционирование */
+    visibility: hidden;    /* Изначально - спрятан */
+    z-index: 10;    /* z-index */
+    color:#478CFB; /* Цвет */
+    font: bold 12pt "Trebuchet MS", tahoma, verdana, arial narrow, arial; /* Толщина, размер и семейство шрифта */
 }
-
-.tabs input {
-	
-
+.tabs:target+.tab {
+    opacity: 1; /* Убирает прозрачность */
+    visibility: visible; /* Делает видимым */
 }
-
-.asddd{
-	visibility: hidden;
+.tabsLink a{
+    background-color:#478CFB; /* Цвет */
+    padding:5px; /* Внутренние отступы */
+    font: bold 12pt "Trebuchet MS", tahoma, verdana, arial narrow, arial; /* Толщина, размер и семейство шрифта */
+    color:#fff; /* Цвет */
+    text-decoration:none; /* Отсутствие нижней линии */
+    
+    /* Округление старт */
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* Округление конец */
 }
-
-#tab_1:checked  ~ #tab_l1,
-#tab_2:checked  ~ #tab_l2,
-#tab_3:checked  ~ #tab_l3,
-#tab_4:checked  ~ #tab_l4,
-#tab_5:checked  ~ #tab_l5 {
-	background: #fff;
-	border-color: #fff;
-	top: 0;
-	z-index: 3;
-}
-
-.tabs_cont {
-	background: #fff;
-	position: relative;
-	z-index: 2;
-	/*height: 500px;*/
-}
-
-
-.tabs_cont > div {
-	position: absolute;
-	left: -9999px;
-	top: 0;
-	opacity: 0;
-	-moz-transition: opacity .5s ease-in-out;
-	-webkit-transition: opacity .5s ease-in-out;
-	transition: opacity .5s ease-in-out;
-}
-#tab_1:checked ~ .tabs_cont #tab_c1,
-#tab_2:checked ~ .tabs_cont #tab_c2,
-#tab_3:checked ~ .tabs_cont #tab_c3,
-#tab_4:checked ~ .tabs_cont #tab_c4,
-#tab_5:checked ~ .tabs_cont #tab_c5 {
-	position: static;
-	left: 0;
-	opacity: 1;
-}
-
-
