@@ -33,14 +33,17 @@
 //</script>
       <!-- Сами вкладки -->
 <ul id="Tabs">
-	<li id="TwoTab" class="Tab"><a href="#Two" onclick="Two(); return false;">Вторая</a></li>
-	<li id="OneTab" class="SelectedTab"><a href="#One" onclick="One(); return false;">Первая</a></li>
+	<li id="OneTab" class="SelectedTab"><a href="#Undertale" onclick="Switch(this); return false;">UNDERTALE</a></li>
+	<li id="TwoTab" class="Tab"><a href="#Gravity_falls" onclick="Switch(this); return false;">GRAVITY FALLS</a></li>
+	<li id="ThreeTab" class="Tab"><a href="#Steven_universe" onclick="Switch(this); return false;">STEVEN UNIVERSE</a></li>
+	<li id="FourTab" class="Tab"><a href="#Other" onclick="Switch(this); return false;">OTHER</a></li>
+	<li id="FiveTab" class="Tab"><a href="#Your_order" onclick="Switch(this); return false;">ВАШ ЗАКАЗ</a></li>
 </ul>
  
 <!-- Содержимое вкладок -->
 <div id="Content">
 	<!-- Первая -->
-	<div id="One">
+	<div id="OneTabp">
 		 <ins class='thumbnail' name='temSh'>			
 		<div class='r'>		
 
@@ -667,16 +670,11 @@
 			</select> </p>	
 		</div>		
 	</ins>			
-<div id="z">
 
-</div>
-<div id="aside1">
-
-</div>
 	</div>
  
 	<!-- Вторая -->
-	<div id="Two" style="display: none;">
+	<div id="TwoTabp" style="display: none;">
 		<ins class="thumbnail" name="tem">
         <div class="r" >
             <img class="t" name="tem"  src="img/tem/tem1.jpg"  alt="tem" onclick="og(this.parentNode, this)"><br />
@@ -693,24 +691,32 @@
 	          </select> </p>
 		</div>
     </ins>
-<div id="z">
+
+
+</div>
+   
+      
+	
+				<div id="ThreeTabp" style="display: none;">
+
+</div>		
+				
+
+					<div id="FourTabp" style="display: none;">
+
+</div>	
+				<div id="FiveTabp" style="display: none;">
+				<div id="z">
 
 </div>
 <div id="aside1">
 
 </div>
-	</div>
-</div>
-   
-      
-	
-					
-				
 
-	
+</div>	
 
 
-
+</div>	
 
 <script >	window.onload=function(){
 alert((document.body.scrollHeight > document.body.offsetHeight)?document.body.scrollHeight:document.body.offsetHeight

@@ -137,31 +137,60 @@ function restart(){
 
 }
 
-
+function Switch(dv){
+	var at=dv.parentNode.parentNode.childNodes;
+	for (var i = 0; i < at.length; i++) {
+		if (at[i].nodeName=="LI" & at[i].id!=dv.parentNode.id){
+			at[i].className = 'Tab';
+			document.getElementById(at[i].id+"p").style.display = 'none';
+			//alert(at[i].id+"p" ); 
+		}
+     // alert( at[i].id ); // Text, DIV, Text, UL, ..., SCRIPT
+    }
+	dv.parentNode.className = 'SelectedTab';
+	window.location.hash=dv.hash;
+	document.getElementById(dv.parentNode.id+"p").style.display = 'block';
+}
 
 function One()
 {
   // Табы
   document.getElementById('OneTab').className = 'SelectedTab';
   document.getElementById('TwoTab').className = 'Tab';
- 
+ document.getElementById('ThreeTab').className = 'Tab';
   // Страницы
   document.getElementById('One').style.display = 'block';
   document.getElementById('OneTab').className = 'SelectedTab';
-  document.getElementById('Two').style.display = 'none';
+  document.getElementById('Three').style.display = 'none';
  
 }
-// 2
+
 function Two()
 {
 
   // Табы
   document.getElementById('OneTab').className = 'Tab';
   document.getElementById('TwoTab').className = 'SelectedTab';
+   document.getElementById('ThreeTab').className = 'Tab';
  
   // Страницы
   document.getElementById('One').style.display = 'none';
   document.getElementById('Two').style.display = 'block';
+   document.getElementById('Three').style.display = 'none';
+}
+
+function Three()
+{
+
+  // Табы
+  document.getElementById('OneTab').className = 'Tab';
+    document.getElementById('TwoTab').className = 'Tab';
+  document.getElementById('ThreeTab').className = 'SelectedTab';
+ 
+  // Страницы
+  document.getElementById('One').style.display = 'none';
+    document.getElementById('Two').style.display = 'none';
+  document.getElementById('Three').style.display = 'block';
  
 }
 

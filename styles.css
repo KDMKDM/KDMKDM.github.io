@@ -508,11 +508,11 @@ ul#Tabs {
 }
  
 #Tabs li.Tab {
-    float: right;
+    float: left;
     height: 25px;
     background-color: #deedfb;
-    margin: 2px 0px 0px 5px;
-    border: 1px solid #a2b6cb;
+   /* margin: 2px 0px 0px 5px;
+    border: 1px solid #a2b6cb;*/
 }
  
 #Tabs li.Tab a {
@@ -530,14 +530,14 @@ ul#Tabs {
  
 /* Состояние: активная */
 #Tabs li.SelectedTab {
-    float: right;
+    float: left;
     height: 25px;
     background-color: #fafafa;
-    margin: 2px 0px 0px 5px;
+    /*margin: 2px 0px 0px 5px;
     border-top: 1px solid #a2b6cb;
     border-right: 1px solid #a2b6cb;
     border-bottom: 1px solid #fafafa;
-    border-left: 1px solid #a2b6cb;
+    border-left: 1px solid #a2b6cb;*/
 }
  
 #Tabs li.SelectedTab A {
