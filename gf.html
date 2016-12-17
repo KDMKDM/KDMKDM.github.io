@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<link rel="shortcut icon" sizes="16x16" href="img/s.ico">
+			<title>HOI</title>
+			<meta charset="utf-8">
+			<link rel="stylesheet" href="styles.css">
+			<script type="text/javascript" src="js.js"></script>
+			<script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+		
+
+<script type="text/javascript" src="asd.js"></script>
+
+
+		</head>
+
+		
+<body >
+
+<div class="tabs">
+    <input id="tab1" type="radio" name="tabs" checked>
+    <label for="tab1" title="Вкладка 1">Вкладка 1</label>
+ 
+    <input id="tab2" type="radio" name="tabs">
+    <label for="tab2" title="Вкладка 2">Вкладка 2</label>
+ 
+    <input id="tab3" type="radio" name="tabs">
+    <label for="tab3" title="Вкладка 3">Вкладка 3</label>
+ 
+    <input id="tab4" type="radio" name="tabs">
+    <label for="tab4" title="Вкладка 4">Вкладка 4</label>
+ 
+    <section id="content1">
+        <p>
+		Здесь размещаете любое содержание....
+        </p>
+    </section>  
+    <section id="content2">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section> 
+    <section id="content3">
+        <p>
+          Здесь размещаете любое содержание....
+		</p>
+    </section> 
+    <section id="content4">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section>    
+</div>
+	
+					
+				
+				
+	
+
+
+
+
+<script >	window.onload=function(){
+var storedNames = JSON.parse(sessionStorage.getItem("products"));
+if (storedNames){
+//if (storedNames['on']=)
+
+}else{
+var products = {};
+sessionStorage.setItem("products", JSON.stringify(products));
+var storedNames = JSON.parse(sessionStorage.getItem("products"));
+//alert(storedNames['t']+ storedNames['a']);
+
+}
+}</script>
+		</body>
+	</html>
