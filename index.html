@@ -721,6 +721,14 @@
 </div>	
 
 <script >	window.onload=function(){
+
+VK.init(
+  function(){
+	  console.log("ASDASDASD");
+	  VK.callMethod("scrollWindow", 200, 500);
+	  VK.callMethod("resizeWindow", 500, 500);
+});
+
 alert((document.body.scrollHeight > document.body.offsetHeight)?document.body.scrollHeight:document.body.offsetHeight
 );
 var storedNames = JSON.parse(sessionStorage.getItem("products"));
