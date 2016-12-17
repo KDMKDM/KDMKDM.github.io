@@ -8,17 +8,17 @@
 			<script type="text/javascript" src="js.js"></script>
 			<script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
 		
-
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 <script type="text/javascript" src="asd.js"></script>
-<script type="text/javascript"  >
-
+<script type="text/javascript" charset="cp1251" >
+$(function() {
     VK.init(function() {
         setInterval(newSizeWindow, 100);
         function newSizeWindow() {
             VK.callMethod("resizeWindow",721,$('.wrapper').height());
         }
    });
-
+});
 </script>
 
 		</head>
