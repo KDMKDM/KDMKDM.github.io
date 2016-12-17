@@ -158,7 +158,7 @@ function Switch(dv){
 	window.location.hash=dv.hash;
 	document.getElementById(dv.parentNode.id+"p").style.display = 'block';
 	console.log(document.getElementById('Content').scrollHeight);
-	VK.callMethod('resizeWindow', 900, document.getElementById('Content').scrollHeight);
+	VK.callMethod('resizeWindow', 900, document.getElementById('Content').scrollHeight+100);
 }
 
 function One()
