@@ -25,9 +25,17 @@
 
 //});
 //</script>
-        <a class="tabs" id="tab1" href="gf.html">khkjhjkhkj</a>
-   
-       <ins class='thumbnail' name='temSh'>			
+      <!-- Сами вкладки -->
+<ul id="Tabs">
+	<li id="TwoTab" class="Tab"><a href="#Two" onclick="Two(); return false;">Вторая</a></li>
+	<li id="OneTab" class="SelectedTab"><a href="#One" onclick="One(); return false;">Первая</a></li>
+</ul>
+ 
+<!-- Содержимое вкладок -->
+<div id="Content">
+	<!-- Первая -->
+	<div id="One">
+		 <ins class='thumbnail' name='temSh'>			
 		<div class='r'>		
 
 				<p class='nam'>TemShop</p>
@@ -50,6 +58,36 @@
 <div id="aside1">
 
 </div>
+	</div>
+ 
+	<!-- Вторая -->
+	<div id="Two" style="display: none;">
+		<ins class="thumbnail" name="tem">
+        <div class="r" >
+            <img class="t" name="tem"  src="img/tem/tem1.jpg"  alt="tem" onclick="og(this.parentNode, this)"><br />
+              <p class="nam">tem</p>
+			  <p class="pr" id="pr-tem">250р.</p>
+			 <input type="button" id="bz" class="buttonText" onclick="bas(this)" name="tem" value="В корзинку" onmouseover="ico(this, true)" onmouseout="ico(this, false)">
+              <p class="psl">Кол.<select class="sel" name="cnt[]" id=s-tem>
+			   <option selected value="1">1</option>
+               <option value="2">2</option>
+	           <option value="3">3</option>
+	           <option value="4">4</option>
+	           <option value="5">5</option>
+	           <option value="10">10</option>
+	          </select> </p>
+		</div>
+    </ins>
+<div id="z">
+
+</div>
+<div id="aside1">
+
+</div>
+	</div>
+</div>
+   
+      
 	
 					
 				
