@@ -138,12 +138,12 @@ function restart(){
 }
 
 function Switch(dv){
-	var scrollHeight = Math.max(
+	/*var scrollHeight = Math.max(
   document.body.scrollHeight, document.documentElement.scrollHeight,
   document.body.offsetHeight, document.documentElement.offsetHeight,
   document.body.clientHeight, document.documentElement.clientHeight
-);
-	console.log(scrollHeight);
+);*/
+	
 	
 	var at=dv.parentNode.parentNode.childNodes;
 	for (var i = 0; i < at.length; i++) {
@@ -157,6 +157,8 @@ function Switch(dv){
 	dv.parentNode.className = 'SelectedTab';
 	window.location.hash=dv.hash;
 	document.getElementById(dv.parentNode.id+"p").style.display = 'block';
+	console.log(document.getElementById('Content').scrollHeight);
+	VK.callMethod('resizeWindow', 900, document.getElementById('Content').scrollHeight);
 }
 
 function One()
