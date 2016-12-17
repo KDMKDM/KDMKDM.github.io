@@ -138,7 +138,7 @@ function restart(){
 }
 
 function Switch(dv){
-	VK.callMethod('resizeWindow', 500, 500);
+	VK.callMethod('resizeWindow', 500, (document.body.scrollHeight > document.body.offsetHeight)?document.body.scrollHeight:document.body.offsetHeight));
 	var at=dv.parentNode.parentNode.childNodes;
 	for (var i = 0; i < at.length; i++) {
 		if (at[i].nodeName=="LI" & at[i].id!=dv.parentNode.id){
