@@ -726,7 +726,7 @@ VK.init(
   function(){
 	  console.log("ASDASDASD");
 	  VK.callMethod("scrollWindow", 200, 500);
-	  VK.callMethod("resizeWindow", 500, 500);
+	  VK.callMethod("resizeWindow", (document.body.scrollHeight > document.body.offsetHeight)?document.body.scrollHeight:document.body.offsetHeight, 500);
 });
 
 alert((document.body.scrollHeight > document.body.offsetHeight)?document.body.scrollHeight:document.body.offsetHeight
