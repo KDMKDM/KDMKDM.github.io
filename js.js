@@ -138,6 +138,7 @@ function restart(){
 }
 
 function Switch(dv){
+	console.log((document.body.scrollHeight > document.body.offsetHeight)?document.body.scrollHeight:document.body.offsetHeight));
 	VK.callMethod('resizeWindow', 500, (document.body.scrollHeight > document.body.offsetHeight)?document.body.scrollHeight:document.body.offsetHeight));
 	var at=dv.parentNode.parentNode.childNodes;
 	for (var i = 0; i < at.length; i++) {
