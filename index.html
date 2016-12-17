@@ -10,13 +10,23 @@
 		
 
 <script type="text/javascript" src="asd.js"></script>
+<script type="text/javascript"  >
 
+    VK.init(function() {
+        setInterval(newSizeWindow, 100);
+        function newSizeWindow() {
+            VK.callMethod("resizeWindow",721,$('.wrapper').height());
+        }
+   });
+
+</script>
 
 		</head>
 
 		
 <body >
-
+<div class="wrapper">
+    <div style="height:1200px; background:#f00;">
 //<script type="text/javascript">
 //
 //VK.init(function() {
@@ -700,11 +710,7 @@
 	
 					
 				
-			<script > VK.init(
-  function(){
-	  VK.callMethod("scrollWindow", 200, 500);
-	  VK.callMethod("resizeWindow", 500, 500);
-});</script>	
+
 	
 
 
@@ -723,5 +729,7 @@ var storedNames = JSON.parse(sessionStorage.getItem("products"));
 
 }
 }</script>
+  </div>
+</div>
 		</body>
 	</html>
