@@ -187,17 +187,17 @@ margin: 5px 0px;
 }
 
 .thumbnail .r {
-    width: 9em;
+    width: 10em;
     float: left;
     padding-top: 5px;
     margin: 0px 5px;
     background-color: #9db0b1
 
 }
-.thumbnail .r:hover{
+/*.thumbnail .r:hover{
 	background-color: rgba(76, 164, 169, 0.64);
 	
-}
+}*/
 
 .zak
 {
