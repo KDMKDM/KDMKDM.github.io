@@ -25,6 +25,7 @@ function getXmlHttp() {
 
 
 function page(){
+	
 	var t =sessionStorage.getItem("products");
 	if (t=="{}") {
 		return 		alert("Не выбрано ни одного товара :'(");
@@ -90,6 +91,9 @@ data.vk=document.getElementsByName("vk")[0].value;
 	 for(var i in products) {
 		 products[i][3].delete;
 	 }
+	 document.getElementById("TTT").style.display='none';
+	 document.getElementById("z").style.display='none';
+	 document.getElementById("main").style.display='none';
 var ddd = JSON.stringify(data);
 var pr = JSON.stringify(products);
 var s=0;
