@@ -117,14 +117,14 @@ function og(elem, path){
 	close: function() {
 		document.getElementById('modalwindow').style.display = 'none';
         document.getElementById('blockscreen').style.display = 'none';
-		document.getElementById('aside1').style.display="";
+		//document.getElementById('aside1').style.display="";
 		i=1;
                 
     },
 	show: function(width, path) {
 //og(this.parentNode, this)
 
-document.getElementById('aside1').style.display="none";
+//document.getElementById('aside1').style.display="none";
 		html='<img name='+path.id+' id="mi" src = img/'+path.id+'/'+path.id+'1.jpg'+' height="567px" width="800px"  id = "img" onClick=nim(this) > </img><p id="pn" >1 из 3</p>';
 		//html='<p>fgdfgdfg</p>';
 		modalWindow.initBlock();
@@ -199,15 +199,15 @@ console.log(all);
 }
 if(t!=""){
 if (s>0){
-	document.getElementById('aside1').innerHTML = t+ "<br>Всего:"+c+" штук, скидка "+s+"%. Цена со скидкой " + (all*(1-(s/100)))+"руб. + "+d+"руб. доставка = "+(all*(1-(s/100))+280)+"руб.";
+	//document.getElementById('aside1').innerHTML = t+ "<br>Всего:"+c+" штук, скидка "+s+"%. Цена со скидкой " + (all*(1-(s/100)))+"руб. + "+d+"руб. доставка = "+(all*(1-(s/100))+280)+"руб.";
 	document.getElementById('z').innerHTML = t+ "<br>Всего:"+c+" штук, скидка "+s+"%. Цена со скидкой " + (all*(1-(s/100)))+"руб. + "+d+"руб. доставка = "+(all*(1-(s/100))+280)+"руб.";
 }else{
-	document.getElementById('aside1').innerHTML = t+ "<br>Всего:"+c+" штук, " + all+"руб. + "+d+".р доставка = "+(all+d)+"руб.";
+	//document.getElementById('aside1').innerHTML = t+ "<br>Всего:"+c+" штук, " + all+"руб. + "+d+".р доставка = "+(all+d)+"руб.";
 	document.getElementById('z').innerHTML = t+ "<br><p>Всего:"+c+" штук, " + all+"руб. + "+d+".р доставка </p><br> <p>Итого: "+(all+d)+"руб.</p>";
 }
 }else{
 	document.getElementById('z').innerHTML = "";
-	document.getElementById('aside1').innerHTML = ":(";
+	//document.getElementById('aside1').innerHTML = ":(";
 
 }
 //document.getElementById('aside1').innerHTML = "Сумма заказа "+ (all-s+d)+"руб.";

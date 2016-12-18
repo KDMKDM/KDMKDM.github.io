@@ -141,7 +141,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#03deff', en
 -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#03deff', endColorstr = '#5cc3ff')";
 /*Element must have a height (not auto)*/
 /*All filters must be placed together*/
-width: 740px;
+width: 100%;
     outline: none;
     border-style: none;
     border-bottom-style: solid;
@@ -420,7 +420,7 @@ float: left;
 }
 
 #dwn{
-	width: 800px;
+	width: 90%;
 	border-radius: 30px;
 }
 .asd{
