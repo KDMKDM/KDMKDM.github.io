@@ -15,7 +15,11 @@
 		</head>
 
 		
-<body id="a" style="visibility:hidden" >
+<body >
+<div id="lod">
+Loading.........
+</div>
+<div id="a" style="display:none" >
 <div style="overflow:auto;">
 <script>
 //alert(document.body.offsetHeight);
@@ -1271,7 +1275,9 @@
 </div>	
 
 <script >	window.onload=function(){
-document.body.style.visibility='visible';
+document.getElementById("lod").style.display='none';
+document.getElementById("a").style.display='block';
+
 VK.init(
   function(){
 	  console.log("ASDASDASD");
@@ -1293,6 +1299,7 @@ var storedNames = JSON.parse(sessionStorage.getItem("products"));
 
 }
 }</script>
+</div>
 </div>
 		</body>
 	</html>
