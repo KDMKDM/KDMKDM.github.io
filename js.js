@@ -84,8 +84,7 @@ data.vk=document.getElementsByName("vk")[0].value;
 
 
 
-document.getElementById("thumbnails").style.display="none";
-document.getElementById("frm").style.display="none";
+
 	 document.getElementById("dwn").src ="img\\dwnA.gif";
 	 //document.getElementById("main").style.display ="none";
 	 for(var i in products) {
@@ -117,10 +116,10 @@ console.log(s)
 			document.getElementById("dwn").src ="img\\dwn.gif";
          if (s<5) {
 			 
-			 document.getElementById("wrapper").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><br><br>Оплатите стоимость заказа " +(Number(all)+Number(d))+ " рублей<br><br> на киви +7 778 312 89 70. <br> <br>ОБЯЗАТЕЛЬНО<br><br> в комментарии к оплате укажите свои ФИО!<br><br> Что бы мы знали кто оплатил.<br><br>Мы свяжемся с вами для подтверждения.<br><br><a href='' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
+			 document.getElementById("FiveTabp").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><br><br>Оплатите стоимость заказа " +(Number(all)+Number(d))+ " рублей<br><br> на киви +7 778 312 89 70. <br> <br>ОБЯЗАТЕЛЬНО<br><br> в комментарии к оплате укажите свои ФИО!<br><br> Что бы мы знали кто оплатил.<br><br>Мы свяжемся с вами для подтверждения.<br><br><a href='' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
 		 } else{
 			 
-			 document.getElementById("wrapper").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><br><br>Оплатите стоимость заказа " +(Number(all)-((Number(all)*10)/100)+Number(d))+ " рублей<br><br> на киви +7 778 312 89 70. <br> <br>ОБЯЗАТЕЛЬНО<br><br> в комментарии к оплате укажите свои ФИО!<br><br> Что бы мы знали кто оплатил.<br><br>Мы свяжемся с вами для подтверждения.<br><br><a href='' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
+			 document.getElementById("FiveTabp").innerHTML = "<p class='asd' >"+xmlhttp.responseText+"</p><p class='asd' ><br><br>Оплатите стоимость заказа " +(Number(all)-((Number(all)*10)/100)+Number(d))+ " рублей<br><br> на киви +7 778 312 89 70. <br> <br>ОБЯЗАТЕЛЬНО<br><br> в комментарии к оплате укажите свои ФИО!<br><br> Что бы мы знали кто оплатил.<br><br>Мы свяжемся с вами для подтверждения.<br><br><a href='' onclick='restart()'>Заказать еще?</a></p>"; // Выводим ответ сервера
 		 }  
 				 
 				// document.getElementById("wrapper").innerHTML = "cvb"; // Выводим ответ сервера
@@ -158,7 +157,7 @@ function Switch(dv){
 	window.location.hash=dv.hash;
 	document.getElementById(dv.parentNode.id+"p").style.display = 'block';
 	console.log(document.getElementById('Content').scrollHeight);
-	VK.callMethod('resizeWindow', 900, document.getElementById('Content').scrollHeight+100);
+	VK.callMethod('resizeWindow', 900, document.getElementById('Content').scrollHeight+300);
 }
 
 function One()

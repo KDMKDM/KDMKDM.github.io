@@ -58,7 +58,7 @@ main {
 .photo {
     display: inline-block; /* Строчно-блочный элемент */
     position: relative; /* Относительное позиционирование */
-	width: 10em;
+	/*width: 10em;*/
 
    }
    .photo:hover::after {
@@ -187,11 +187,11 @@ margin: 5px 0px;
 }
 
 .thumbnail .r {
-    width: 10em;
+    width: 9em;
     float: left;
     padding-top: 5px;
     margin: 0px 5px;
-    background-color: cadetblue;
+    background-color: #9dc8ca;
 
 }
 .thumbnail .r:hover{
@@ -236,6 +236,8 @@ text-decoration:none;
 
 	text-shadow:0px 1px 0px #2f6627;
 	outline: none;
+	    height: 30px;
+            width: inherit;
 }
 
 
@@ -419,6 +421,7 @@ float: left;
 
 #dwn{
 	width: 800px;
+	border-radius: 30px;
 }
 .asd{
 	    margin: 15px;
@@ -501,6 +504,7 @@ ul#Tabs {
 list-style-type: none;
     margin: 0;
     padding: 0;
+	    margin-bottom: 5px;
     overflow: hidden;
     background-color: #f1f1f1;
 }
